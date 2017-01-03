@@ -47,7 +47,7 @@ class LargeInitialMixin(object):
             # We have to special-case M2Ms as a list of comma-separated PKs.
             if isinstance(f, models.ManyToManyField):
                 if initial[k].startswith("session-"):
-                    initial[k] = request.session.get(initial[k])
+                    initial[k] = request.session.get(initial[k]).split(",")
                 else:
                     initial[k] = initial[k].split(",")
         return initial

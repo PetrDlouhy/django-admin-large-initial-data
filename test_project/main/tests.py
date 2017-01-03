@@ -68,7 +68,7 @@ class LargeInitialTest(TestCase):
         response = self.client.get(address, follow=True)
         self.assertContains(
             response,
-            '<option value="9" selected="selected">Musician object</option>',
+            '<option value="2000" selected="selected">Musician object</option>',
             html=True,
         )
 
