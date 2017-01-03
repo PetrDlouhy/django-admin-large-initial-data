@@ -22,10 +22,11 @@ Then you can create redirection link:
 ```Python
    from large_initial import build_redirect_url
 
-   address = build_redirect_url(
+   redirect_url = build_redirect_url(
        request,
        'admin:main_album_add',
        params={'artists': musicians},
    )
+   return HttpResponseRedirect(redirect_url)
 ```
 all of the `musicians` objects are stored in `request.session`.
