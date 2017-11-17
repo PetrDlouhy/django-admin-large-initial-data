@@ -56,7 +56,7 @@ INSTALLED_APPS = (
     'test_project.main',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -65,6 +65,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+MIDDLEWARE_CLASSES = MIDDLEWARE
 
 ROOT_URLCONF = 'test_project.urls'
 
