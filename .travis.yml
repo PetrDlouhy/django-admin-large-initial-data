@@ -10,6 +10,8 @@ env:
   - DJANGO_VERSION=dj18
   - DJANGO_VERSION=dj19
   - DJANGO_VERSION=dj110
+  - DJANGO_VERSION=dj111
+  - DJANGO_VERSION=dj20
   - DJANGO_VERSION=djdev
 
 matrix:
@@ -18,6 +20,12 @@ matrix:
   include:
     - python: "2.7"
       env: MODE=flake8
+  exclude:
+    - python: "2.7"
+      env: DJANGO_VERSION=dj20
+    - python: "2.7"
+      env: DJANGO_VERSION=djdev
+
 
 cache:
   directories:
