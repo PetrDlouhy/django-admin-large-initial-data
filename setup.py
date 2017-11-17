@@ -21,7 +21,7 @@ def runtests():
 
 setup(
     name='django-admin-large-initial-data',
-    version='0.0.2',
+    version='1.0.0',
     description="Allow to make redirects with large session "
     "data to django ModelAdmin add view",
     author='Petr Dlouhý',
