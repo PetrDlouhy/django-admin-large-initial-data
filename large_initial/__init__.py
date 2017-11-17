@@ -1,7 +1,10 @@
 import hashlib
 
 from django.core.exceptions import FieldDoesNotExist
-from django.core.urlresolvers import reverse
+try:
+    from django.urls import reverse
+except ImportError:  # Django<2.0
+    from django.core.urlresolvers import reverse
 from django.db import models
 from django.http import QueryDict
 
